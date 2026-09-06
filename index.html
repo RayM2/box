@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1e2935" />
+    <title>Stella's Way Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=VT323&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell" aria-label="Stella's Way Home interactive quiz">
+      <header class="topbar">
+        <a class="wordmark" href="#" aria-label="Restart story">STELLA'S <span>WAY HOME</span></a>
+        <div class="room-status" aria-live="polite">
+          <span class="eyebrow">STELLA's WAY HOME</span>
+          <strong id="chapter">HOMEWARD</strong>
+          <span id="room-name">Start the journey</span>
+        </div>
+      </header>
+
+      <section class="game-stage" aria-label="Story scene">
+        <div class="scene-sky" aria-hidden="true"></div>
+        <div id="scene" class="scene" role="application" aria-label="Answer Stella's question to guide her home"></div>
+      </section>
+
+      <section class="dialogue-panel adventure-panel" aria-live="polite">
+        <h1 id="story-title">Help Stella Get Home</h1>
+        <p id="dialogue">Answer Stella's questions correctly to guide her back to her favorite box.</p>
+        <div id="choices" class="choices" aria-label="Story choices"></div>
+        <button id="restart-button" class="text-button" type="button" hidden>Start over</button>
+      </section>
+    </main>
+
+    <div id="modal" class="modal" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <p id="modal-kicker" class="eyebrow"></p>
+        <h1 id="modal-title"></h1>
+        <p id="modal-copy"></p>
+        <div id="modal-actions" class="modal-actions"></div>
+      </div>
+    </div>
+
+    <script src="adventure.js"></script>
+  </body>
+</html>
